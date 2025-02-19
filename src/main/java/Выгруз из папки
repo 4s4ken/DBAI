@@ -1,0 +1,31 @@
+// Подключение к базе данных
+        /*  dbHandler.connect();
+
+        // Загрузка изображений из папки в таблицу `images`
+        dbHandler.uploadImage();
+
+        // Получение количества строк в таблице `images`
+        int rowCount = dbHandler.getRowCount("images");
+
+        // Обработка каждого изображения
+        int imageId = 1;
+        while (imageId <= rowCount) {
+            byte[] imageData = dbHandler.getImageData(imageId);
+            if (imageData != null) {
+                // Преобразование изображения
+                BufferedImage image = imageProcessor.convertToImage(imageData);
+                BufferedImage processedImage = imageProcessor.preprocessImage(image);
+
+                // Прогнозирование нейронной сетью
+                String prediction = neuralNetwork.predict(processedImage);
+
+                // Сохранение результата в таблицу Predict
+                dbHandler.savePrediction(imageId, prediction);
+            } else {
+                System.out.println("Изображение с ID " + imageId + " не найдено в базе данных.");
+            }
+            imageId++;
+        }
+
+        // Закрытие соединения с базой данных
+        dbHandler.closeConnection();*/

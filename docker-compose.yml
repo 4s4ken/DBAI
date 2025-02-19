@@ -1,0 +1,18 @@
+version: '3.8' # Укажите версию Docker Compose
+
+services:
+  db:
+    image: postgres:13 # Используемый образ PostgreSQL v13
+    container_name: postgres_db # Имя контейнера
+    restart: always
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432:5432" # Проброс порта 5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data # Сохранение данных в volume для их сохранности после перезапуска контейнера
+
+volumes:
+  pgdata:
